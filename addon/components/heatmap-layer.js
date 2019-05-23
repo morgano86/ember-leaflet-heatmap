@@ -23,7 +23,8 @@ export default EmberLeafletBaseLayer.extend({
   },
   
   willDestroyElement() {
-    console.log("Base layer destroyed");
+    this._super(...arguments);
+    get(this, '_layer').destroy();
   },
 
   setDataObservers() {
