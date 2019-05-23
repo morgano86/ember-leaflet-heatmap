@@ -21,6 +21,10 @@ export default EmberLeafletBaseLayer.extend({
     this.setDataObservers();
 
   },
+  
+  willDestroyElement() {
+    console.log("Base layer destroyed");
+  },
 
   setDataObservers() {
     A(['lat', 'lng', 'value']).forEach((property) => {

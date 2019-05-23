@@ -74,6 +74,10 @@ if (typeof FastBoot === 'undefined') {
       map.off('moveend', this._reset, this);
 
     },
+  
+    willDestroyElement() {
+      console.log("Heatmap layer destroyed");
+    },
 
     _draw() {
       if (!this._map) {
